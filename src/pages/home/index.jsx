@@ -9,9 +9,12 @@ import classes from "./home.module.scss";
 
 import { Layout, Menu, theme, Table } from "antd";
 import React from "react";
-const { Header, Content, Footer, Sider } = Layout;
+const { Content, Footer, Sider } = Layout;
 
 const columns = [
+  //   {id:"Id",
+  //    dataIndex:""
+  // },
   {
     title: "Product Name",
     dataIndex: "name",
@@ -65,12 +68,6 @@ const App = () => {
         />
       </Sider>
       <Layout>
-        <Header
-          style={{
-            padding: 0,
-            background: colorBgContainer,
-          }}
-        />
         <Content
           style={{
             margin: "24px 16px 0",
@@ -83,16 +80,9 @@ const App = () => {
               background: colorBgContainer,
             }}
           >
-            <Table columns={columns} dataSource={newsData} size="middle" />
+            <Table columns={columns} dataSource={newsData} size="large" />
           </div>
         </Content>
-        <Footer
-          style={{
-            textAlign: "center",
-          }}
-        >
-          Ant Design ©2023 Created by Ant UED
-        </Footer>
       </Layout>
     </Layout>
   );

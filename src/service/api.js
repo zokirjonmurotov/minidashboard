@@ -22,7 +22,7 @@ const API_URL = axios.create({
   baseURL: API,
   headers: {
     Authorization: ACCESS_TOKEN,
-    "Content-Type": "application/json",
+    "Content-Type": "application/x-www-form-urlencoded",
   },
 });
 
